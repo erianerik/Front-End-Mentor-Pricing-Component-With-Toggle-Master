@@ -1,0 +1,170 @@
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    font-family: 'Montserrat';
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    background: url("../images/bg-bottom.svg") left bottom no-repeat, url("../images/bg-top.svg") top right no-repeat;
+    background-color: hsl(240, 78%, 98%);
+}
+
+.pagamento {
+    position: relative;
+}
+
+.pagamento h2 {
+    margin: 0;
+    display: inline-block;
+    margin-bottom: 50px;
+    color: #bab9c7;
+    font-size: 15px;
+}
+
+.pagamento h1 {
+    color: #6e728d;
+}
+
+.pagamentoCards {
+    display: flex;
+    justify-content: center;
+}
+
+.desingCard {
+    box-sizing: border-box;
+    width: 30%;
+    height: 50vh;
+    background-color: #fefefe;
+    color: #5f5f69;
+    text-align: center;
+    margin-top: 2vh;
+    box-shadow: 10px 10px 50px hsl(236, 72%, 79%);
+    border-radius: 5px;
+}
+
+.desingCard h2, .desingCardPrincipal h2 {
+    font-size: 50px;
+}
+
+.desingCard ul, .desingCardPrincipal ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.desingCard ul li, .desingCardPrincipal ul li {
+    padding: 10px 0;
+    font-weight: bolder;
+}
+
+.desingCard hr {
+    color: #ddd;
+    margin: 0 20px;
+}
+
+.desingCard h2:nth-child(3), .desingCardPrincipal h2:nth-child(3) {
+    display: none;
+}
+
+.bottonLearn {
+    display: inline-block;
+    width: 80%;
+    height: 5vh;
+    line-height: 5vh;
+    margin-top: 20px;
+    border-radius: 5px;
+    color: #fff;
+    background-image: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bolder;
+    font-size: 13px;
+}
+
+.bottonLearn:hover {
+    color: #9191cd;
+    background-image: none;
+    border: 1px solid #9191cd;
+}
+
+/* CARD PRINCIPAL */
+
+.desingCardPrincipal {
+    box-sizing: border-box;
+    width: 30%;
+    height: 54vh;
+    background-image: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.desingCardPrincipal .bottonLearn {
+    background-image: linear-gradient( hsl(255, 100%, 100%), hsl(255, 100%, 100%));
+    margin-top: 10px;
+    color: #9191cd;
+}
+
+.desingCardPrincipal .bottonLearn:hover {
+    background-image: none;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 345px) {
+    .pagamentoCards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .desingCard, .desingCardPrincipal {
+        width: 100%;
+    }
+    .desingCardPrincipal {
+        margin: 20px 0;
+    }
+}
+
+/* BOTÃO ON/OFF */
+
+.button>label {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    border-radius: 50px;
+    vertical-align: middle;
+    margin: 0 20px;
+    background-image: linear-gradient( hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+.button>label::before {
+    content: ' ';
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin: 2px 4px;
+    border-radius: 50px;
+    background-color: #fff;
+    transition: all .2s ease;
+}
+
+.button>input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    
+}
+
+.button > input:checked + label::before{
+    transform: translateX(21px);
+    
+}
